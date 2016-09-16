@@ -1,0 +1,26 @@
+
+#include<stdio.h>
+
+float poly(float a[],float x,int deg)
+{
+	int i;
+	float sum = 0;
+	for(i=deg;i>=0;i--)
+		sum=sum *x+a[i];
+	return sum;
+}
+
+int main()
+{
+	int i,deg;
+	float x,sum,a[20];
+	printf("enter the degree:\n");
+	scanf("%d",&deg);
+	printf("enter the (n+1) coefficients:\n");
+	for(i=0;i<=deg;i++)
+	scanf("%f",&a[i]);
+	printf("enter the value of x:\n");
+	scanf("%f",&x);
+	printf("the sum of the polynomial=%f",poly(a,x,deg));	
+	return 0;
+}
