@@ -1,0 +1,38 @@
+#include<stdio.h>
+#include<math.h>
+int main()
+{
+	float a,b,c;
+	float d,r1,r2,rr,ri;
+	printf("enter the coefficients of quadratic equation:\n");
+	scanf("%f%f%f",&a,&b,&c);
+	if(a*b*c==0)
+	{
+		printf("invalid output\n");
+	}
+	else
+	{
+		d=((b*b)-((4*a)*c));
+	if(d==0)
+	{
+		r1=r2=-b/(2*a);
+		printf("root are real and equal:\n");
+		printf("r1=r2=%f",r1);
+	}
+	else if(d>0)
+	{
+		r1=(-b+sqrt(d))/(2*a);
+		r2=(-b-sqrt(d))/(2*a);
+		printf("the roots are real and distinct roots:\n");
+		printf("r1=%f and r2=%f",r1,r2);
+	}
+	else
+	{
+		rr=-b/(2*a);
+		ri=(sqrt(-d)/(2*a));
+		printf("roots are complex\n");
+		printf("r1=%f+i%f and r2=%f-i%f",rr,ri,rr,ri);
+	}
+	}
+return 0;
+}
